@@ -1,0 +1,399 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+body {
+    background-color: #eee;
+}
+
+:root {
+    --FirstColor: #212529;
+    --SecondryColor: #CE1212;
+    --thirdColor: #7f7f90;
+    --font-primary: "Amatic SC", sans-serif;
+    --Second-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* ________________________________NavBar________________________________ */
+.navbar {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 100;
+}
+
+.nav-name {
+    width: 40%;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    font-size: 30px;
+}
+
+.nav-name a {
+    text-decoration: none;
+    color: black;
+    text-decoration: bold;
+}
+
+.nav-log {
+    width: 20%;
+    font-size: 25px;
+}
+
+.nav-menu {
+    width: 40%;
+    color: grey;
+}
+
+.nav-menu .home-custom {
+    color: black;
+    padding-bottom: 10px;
+    border-bottom: red solid 2px;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu ul li {
+    width: 10%;
+    text-align: center;
+}
+
+@media screen and (max-width:600px) {
+    .navbar {
+        background-color: #fff;
+        opacity: 0;
+
+    }
+
+    .navbar,
+    .nav-menu ul {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .nav-menu ul li {
+        margin: 10px 0px;
+        color: black;
+    }
+}
+
+/* _______________________________Header______________________________________ */
+
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home-contan {
+    width: 30%;
+    padding-left: 100px;
+}
+
+.home-contan h1 {
+    font-size: 64px;
+    font-family: var(--font-primary);
+    color: #37373f;
+}
+
+.home-contan p {
+    color: #4f4f5a;
+    font-family: var(--Second-font);
+    padding: 20px 0px;
+}
+
+.home-contan button {
+    border: none;
+    margin: 10px;
+}
+
+.home-contan .btn-1 {
+    color: white;
+    background-color: var(--SecondryColor);
+    border: 5px solid var(--SecondryColor);
+    padding: 5px 10px;
+    border-radius: 0px 20px 20px 20px;
+}
+
+.home-contan i {
+    background-color: white;
+    padding: 10px;
+    border-left: 8px solid var(--SecondryColor);
+    border-top: 8px solid var(--SecondryColor);
+    border-radius: 50%;
+}
+
+.home-img {
+    width: 40%;
+}
+
+.home-img img {
+    width: 450x;
+    height: 450px;
+}
+
+.home-img img:hover {
+
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+/* _____________________________________chefs___________________________________ */
+
+.chefs {
+    background-color: white;
+    padding: 50px 0px;
+
+}
+
+.chefs-head {
+    text-align: center;
+    color: var(--thirdColor);
+}
+
+.chefs-head p {
+    font-family: var(--font-primary);
+    font-size: 50px;
+    color: var(--FirstColor);
+    padding-bottom: 40px;
+}
+
+.chefs-span {
+    color: var(--SecondryColor);
+}
+
+.chefs-contant {
+    display: flex;
+    justify-content: center;
+    /* margin: 50px; */
+}
+
+.chefs-contant .contant img {
+    width: 100%;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    /* height: 400px; */
+    /* margin: 10px; */
+}
+
+.chefs-contant .contant {
+    width: 20%;
+    /* padding: 5px; */
+    box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    /* padding-bottom: 20px; */
+}
+
+.chefs-contant .contant span,
+p {
+    /* margin: 20px; */
+    padding: 20px;
+    font-family: var(--Second-font);
+}
+
+.chefs-contant .contant span,
+p {
+    color: var(--thirdColor);
+    font-size: 14px;
+}
+
+.chefs-contant .contant:hover {
+    transform: scale(1.05, 1.05);
+    transition-duration: 1s;
+}
+
+/* ____________________________gallery________________________________ */
+.gallery {
+    padding: 50px;
+    /* height: 1500px; */
+    text-align: center;
+
+}
+
+.gallery-head {
+    text-align: center;
+    color: var(--thirdColor);
+}
+
+.gallery-head p {
+    font-family: var(--font-primary);
+    font-size: 50px;
+    color: var(--FirstColor);
+    /* padding-bottom: 40px; */
+}
+
+.gallery .gallery-img {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-img img {
+    width: 416px;
+    margin: 20px;
+    /* width: 33%; */
+    /* margin: 50px; */
+    /* width: 50%; */
+
+}
+
+.gallery-img .third-gimg {
+    /* flex-direction: column; */
+    /* width: 416px; */
+    flex: con;
+}
+
+.gallery-img .third-gimg img {
+    flex-direction: column;
+    /* width: 416px; */
+
+}
+
+.gallery .gallery-img .first_gimg .first {
+    position: relative;
+}
+
+.gallery .gallery-img .first_gimg .first .overlay {
+    position: absolute;
+    top: 20px;
+    bottom: 0px;
+    left: 20px;
+    right: 0px;
+    height: 92%;
+    width: 92%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gallery .gallery-img .first_gimg .first:hover .overlay {
+    opacity: 1;
+}
+
+.gallery .gallery-img .first_gimg .first .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.contact {
+    padding-top: 100px;
+    background-color: white;
+
+
+}
+
+.contact .contact-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contact .contact-contant {
+    width: 100%;
+    /* display: flex; */
+}
+
+.contact .contact-contant .line {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.contact .contact-head h2 {
+    color: var(--thirdColor);
+}
+
+.contact .contact-head p {
+    font-family: var(--font-primary);
+    font-size: 50px;
+    color: var(--FirstColor);
+    padding-bottom: 40px;
+}
+
+.contact .contact-contant i {
+    font-size: 30px;
+    color: white;
+    background-color: #CE1212;
+    border: 10px solid #CE1212;
+    border-radius: 50px;
+}
+
+.contant-1 {
+    display: flex;
+    justify-content: center;
+}
